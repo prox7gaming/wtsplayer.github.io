@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!--
+ DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+
+ Copyright (C) 2016 Georgy Kosturov aka Geosins <geosins@yandex.ru>
+-->
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="60pt" height="64pt" viewBox="0 0 60 64" preserveAspectRatio="xMidYMid meet">
+  <g transform="translate(0,64) scale(0.1,-0.1)" fill="#000000" stroke="none">
+    <path d="M196 604 c-103 -37 -199 -154 -173 -211 7 -16 19 -23 39 -23 23 0 34 9 59 50 57 92 163 127 255 84 35 -17 36 -18 15 -28 -12 -5 -20 -14 -18 -20 4 -14 146 -85 170 -86 15 0 17 11 17 100 0 86 -2 100 -16 100 -9 0 -22 -7 -29 -17 -11 -15 -15 -14 -46 9 -72 55 -190 73 -273 42z"/>
+    <path d="M40 260 c-11 -7 -21 -146 -12 -182 6 -24 29 -23 42 2 10 19 12 19 51 -10 145 -105 339 -58 436 105 18 30 16 60 -7 80 -27 24 -58 8 -85 -43 -44 -81 -153 -121 -240 -88 -44 17 -60 36 -30 36 8 0 15 8 15 18 0 13 -22 29 -79 54 -43 20 -84 32 -91 28z"/>
+  </g>
+</svg>

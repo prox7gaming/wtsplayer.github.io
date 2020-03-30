@@ -1,0 +1,430 @@
+/*
+ The MIT License
+
+ Copyright (c) 2016 Leonid Fenko aka Fen-ok <fenok2112@gmail.com>, Georgy Kosturov aka Geosins <geosins@yandex.ru>
+*/
+
+.close {
+    display: none !important;
+}
+.fakeClose {
+    opacity: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none; 
+    cursor: default;
+}
+.redBorders {
+    border: 1px solid red !important;
+}
+
+input[type="text"],input[type="password"]{
+    height: 23px;
+    box-sizing: border-box;
+    padding: 0 3px;
+    border: 1px solid #aaa;
+}
+
+#overlay {
+    position: absolute;
+    min-width: 520px !important;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(136,136,136,0.9);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#overlayContent {
+	position: relative;
+	top: 15px;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid orange;
+    background: white;
+	/*margin-bottom: 80px;
+    margin: 20px auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 95%;*/
+}
+
+#float{
+    position: relative;
+    top: -15px;
+}
+
+body {
+	font-family: 'Times New Roman', Times, Georgia;
+	font-size: 16px;
+}
+
+h1 {
+    margin: 0;
+}
+h3 {
+    margin-bottom: 5px;
+}
+.join h3 {
+    margin-top: 5px;
+}
+#audioChatStatus, #audioChatStatus + label{
+    position: relative;
+    top: 10px;
+}
+
+#footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	background-color: #ccc;
+	padding-top: 4px;
+	box-sizing: border-box;
+	border-top: 2px solid orange;
+}
+
+#footer a img{
+    position: absolute;
+    bottom: 0px;
+    height: 28px;
+}
+#footer a:nth-of-type(1) img{
+    left: 5px;
+    transform: scale(0.9);
+}
+#footer a:nth-of-type(2) img{
+    left: 34px;
+    transform: scale(0.88);
+}
+#footer a:nth-of-type(3) img{
+    left: 64px;
+    transform: scale(0.82);
+}
+#footer a:nth-of-type(4) img:first-of-type {
+    right: 2px;
+}
+#footer a:nth-of-type(4) img:last-of-type {
+    right: 68px;
+    transform: scale(0.89);
+}
+
+@media screen and (max-height: 565px) {
+    #overlay.create{
+		min-width:  800px!important;
+		min-height: 420px!important;
+	}
+    .create #overlayContent {
+        width: 790px;
+    }
+    .create #overlayContent > div {
+        display: inline-block;
+        width: 49%;
+    }
+    .create #overlayContent > div:last-of-type {
+        position: absolute;
+        right: 0;
+        top: 225px;
+    }
+    #overlay.create {
+        min-width: 800px !important;
+    }
+}
+
+@media screen and (max-height: 490px) {
+	#overlay.join {
+		min-height: 490px!important;
+    }
+	#overlay.password {
+		min-height: 290px!important;
+    }
+    #overlay.copy {
+		min-height: 360px!important;
+    }
+	#overlay.error {
+		min-height: 250px!important;
+    }
+	#overlay.closeContent {
+		min-height: 230px!important;
+    }
+}
+
+#overlayContent > div {
+    vertical-align: top;
+}
+
+#logo{
+	height: 95px;
+	border-radius: 7px 7px 0 0;
+	/*background-color: #0bf;*/
+	background-image: linear-gradient(#0bf 50%,#fff);
+	-moz-user-select: none;
+    -webkit-user-select: none;
+
+}
+#logo a{
+	text-decoration: none;
+}
+#logo img{
+	height: 55px;
+	letter-spacing: -1em;
+}
+#logo span{
+	position: relative;
+	top: -5px;
+	left: -7px;
+	font-family: Verdana;
+	font-size: 60px;
+	font-weight: bold;
+	color: #FFFFFF;
+	letter-spacing: -0.3em;
+	text-shadow: -0.05em 0px 0.07em #000000;
+}
+#logo span:nth-of-type(n+4)
+{
+	color: #F00000;
+	letter-spacing: -0.23em;
+}
+#logo span:nth-of-type(3)
+{
+	letter-spacing: 0;
+}
+/*.craete .join .password .error*/
+.password #overlayContent > *:not(h1):not(#joinButton):not(#typeRoom), 
+.password #typeRoom  *:not(.shell):not(#wrongPassword), .password #typeRoom  > .shell > .shell:first-of-type,
+.error #overlayContent > *:not(h1):not(#joinButton),
+.closeContent #overlayContent > *:not(h1), .join #typeRoom ,
+.copy #overlayContent > *:not(h1):not(#joinButton):not(#roomURL), .copy #overlayContent #roomURL h3,
+.join #overlayContent #roomURL p, .create #overlayContent #roomURL /*,.password .close#wrongPassword , .closeContent*/ {
+    display: none;
+}
+.closeContent #title{
+	margin-bottom: 10px;
+}
+.closeContent #overlayContent{
+	top: 0;
+}
+.password #typeRoom .shell #passwordInput {
+    opacity: 1;
+    margin: 5px 0 0 0;
+    width: 120px;
+    display: inline;
+    padding: 0 3px;
+    
+}
+
+#roomURL{
+    padding: 5px;
+}
+#roomURLtext{
+    width: 190px;
+}
+#roomURLpass{
+    width: 90px;
+}
+#roomURLpassArea{
+    display: inline-block;
+}
+#showPass{
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    display: inline-block;
+    height: 19px;
+    width: 89px;
+    background-color: white;
+    cursor: pointer;
+    font-style: italic;
+}
+.widthCopy #showPass{
+    width: 69px;
+}
+.widthCopy  #roomURLtext, .widthCopy #roomURLpass{
+    padding-right: 20px;
+}
+#roomURL input[type="image"]{
+    height: 18px;
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    display: none;
+}
+#roomURL.widthCopy input[type="image"]{
+    display: inline;
+}
+#roomURL.widthCopy input[type='image']:active{
+    transform: scale(0.9);
+}
+.shell{
+    position: relative;
+    display: inline-block;
+}
+.shell *{
+    vertical-align: top;
+}
+
+#typeRoom input[type="image"]{
+    height: 18px;
+    position: absolute;
+    top: 2px;
+    right: 1px;
+}
+#passwordCheck+ label + .shell{
+    position: relative;
+    width: 270px; /*standard width*/
+    right: 20px;
+    transition: all 0.5s ease-out 0s;
+}
+#passwordCheck+ label + .shell + .shell{
+    width: 130px;
+}
+.create #passwordCheck+ label + .shell + .shell{
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-out 0s;
+}
+#roomId, #passwordInput{
+    width: 100%;
+    padding-right: 19px;
+}
+#passwordCheck, #passwordCheck + label{
+    position: relative;
+    left: 275px;
+}
+#passwordCheck + label{
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: all 0.5s ease-out 0s;
+}
+#passwordCheck[type="checkbox"] {
+    display: none;
+}
+#passwordCheck + label:before {
+    content: "";
+    background-image: url("unlocked.svg");
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: baseline;
+    transition: all 0.5s ease-out 0s;
+}
+#passwordCheck:checked + label:before {
+    background-image: url("locked.svg");
+}
+#passwordCheck:checked + label + .shell + .shell{
+    width: 120px;
+    opacity: 1;
+    transition: all 0.5s ease-out 0s;
+}
+#passwordCheck:checked + label + .shell{
+    width: 150px;
+    transition: all 0.5s ease-out 0s;
+}
+#passwordCheck:checked, #passwordCheck:checked + label{
+    left: 156px;
+    transition: all 0.5s ease-out 0s;
+}
+
+
+#joinButton {
+    position: relative;
+    top: 25px;
+    margin-top: -25px;
+    width: 300px;
+    height: 50px;
+    border: none;
+    background: orange;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#wrongPassword {
+    width: 120px;
+    display: inline-block;
+    color: red;
+}
+#wrongId{
+    color: red;
+}
+
+#localURL{
+    max-width: 375px;
+}
+
+.korpus1 {
+    position: relative;
+    height: 128px;
+    width: 388px;
+    margin: auto;
+}
+
+.korpus1 > span {
+    display: inline-block;
+    width: 128px;
+    line-height: 28px;
+    height: 28px;
+    border-left: 1px solid #aaa;
+    border-top: 1px solid #aaa;
+    text-align: center;
+    cursor: pointer;
+	overflow: hidden;
+}
+
+.create .korpus1 > span {
+    width: 192.5px;
+}
+
+.korpus1 > span:last-of-type, .create .korpus1 > span:nth-last-of-type(2) {
+    border-right: 1px solid #aaa;
+}
+
+.korpus1 > div {
+    position: absolute;
+	top: 28px;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #aaa;
+    background: #fff;
+}
+
+.korpus1 > div:nth-of-type(n+2) {
+    visibility: collapse;
+}
+
+.korpus1 > div:before {
+    border-top: 2px solid #fff;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 128px;
+}
+.create .korpus1 > div:before {
+    width: 193px;
+}
+
+.korpus1 > div:nth-of-type(2):before {
+    left: 129px;
+}
+
+.create .korpus1 > div:nth-of-type(2):before {
+    width: 192px;
+    left: 194px;
+}
+
+.korpus1 > div:nth-of-type(3):before {
+    left: 258px;
+}

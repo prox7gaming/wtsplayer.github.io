@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--
+ DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+
+ Copyright (C) 2016 Georgy Kosturov aka Geosins <geosins@yandex.ru>
+-->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100mm" height="150mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 10000 15000"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:black;stroke-width:500}
+    .fil0 {fill:white}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_654312410944">
+   <g id="_484._Forward">
+    <g>
+     <path class="fil0 str0" d="M1225 6932l6081 -6600c270,-294 709,-294 979,0l490 531c271,294 271,770 0,1064l-5101 5536 5101 5536c271,294 271,771 0,1064l-490 531c-270,294 -709,294 -979,0l-6081 -6600c-271,-293 -271,-769 0,-1062z"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

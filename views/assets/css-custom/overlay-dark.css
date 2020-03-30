@@ -1,0 +1,127 @@
+#overlay *::selection {
+    background: black;
+    color: ghostwhite;
+}
+
+#overlay {
+    font-family: Arial;
+    font-size: 15px;
+}
+
+#overlayContent * {
+    border-color: #5e5e5e;
+}
+
+#showPass {
+    font-size: 13px;
+    height: 18px;
+    top:3px;
+    left: 2px;
+}
+
+#overlay , #footer, #overlayContent, #overlay input, #overlay select, .korpus1 > div, #showPass{
+    background-color: #222;
+    color: #9d9d9d;
+}
+.korpus1 > div:before {
+    border-top: 2px solid #222;
+}
+
+.korpus1 > div {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.korpus1 > span:first-of-type {
+    border-top-left-radius: 5px;
+}
+
+.korpus1 > span:last-of-type {
+    border-top-right-radius: 5px;
+}
+
+.korpus1 select {
+    border-radius: 5px;
+}
+
+.korpus1 input[type=file]{
+    width: 95%;
+    border: 1px solid;
+}
+
+#logo {
+    background-image: none;
+    border-bottom: 1px solid orange;
+    height: 76px;
+}
+
+#overlay
+{
+    background-color: rgba(0,0,0,0.7);
+}
+
+#logo img{
+    position: relative;
+    top: 4px;
+}
+
+#joinButton {
+    border: 1px solid orange;
+}
+
+#joinButton:hover {
+    color: ghostwhite;
+}
+
+#overlayContent {
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+#overlay input {
+    border-radius: 5px;
+}
+
+#logo span {
+    color: whitesmoke;
+}
+
+select option:checked {
+    background: #222;
+    color: #9d9d9d;
+    box-shadow: inset 20px 20px rgba(0,0,0,1)
+}
+
+select option:disabled {
+    color: #000;
+}
+
+select option:not(:disabled):hover {
+    color: ghostwhite;
+}
+
+#overlay select {
+    overflow: hidden;
+}
+
+#overlay select:hover {
+    overflow: auto;
+}
+
+#localURL:before{
+    content: "Выберите файл";
+    width: 103px;
+    position: absolute;
+    background-color: #222;
+    min-height: 19px;
+    border: 1px solid #5e5e5e;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    top: 5px;
+    left: 12px;
+    padding: 3px 0 0 5px;
+}
+
+#localURL:hover{
+    color: whitesmoke;
+}

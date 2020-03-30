@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--
+ DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+
+ Copyright (C) 2016 Georgy Kosturov aka Geosins <geosins@yandex.ru>
+-->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="5.08mm" height="5.08mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 508 508"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil2 {fill:#C5C6C6}
+    .fil1 {fill:#B2B3B3}
+    .fil0 {fill:#9D9E9E}
+    .fil6 {fill:#898989}
+    .fil7 {fill:#727271}
+    .fil5 {fill:#5B5B5B}
+    .fil4 {fill:#434242}
+    .fil3 {fill:#2B2A29}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <circle class="fil0" cx="90" cy="254" r="53"/>
+  <circle class="fil1" cx="142" cy="131" r="53"/>
+  <circle class="fil2" cx="260" cy="89" r="53"/>
+  <circle class="fil3" cx="382" cy="141" r="53"/>
+  <circle class="fil4" cx="429" cy="265" r="53"/>
+  <circle class="fil5" cx="388" cy="380" r="53"/>
+  <circle class="fil6" cx="138" cy="370" r="53"/>
+  <circle class="fil7" cx="257" cy="419" r="53"/>
+ </g>
+</svg>

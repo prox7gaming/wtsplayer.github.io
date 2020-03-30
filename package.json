@@ -1,0 +1,45 @@
+{
+  "name": "WTSPlayer",
+  "version": "1.0.0",
+  "description": "Web. Torrent. Synced. Player.",
+  "keywords": [
+    "webtorrent",
+    "synchronization",
+    "player",
+    "OpenShift",
+    "Node.js",
+    "application",
+    "openshift"
+  ],
+  "author": {
+    "name": "Fen-ok&Geosins",
+    "email": "fenok2112@gmail.com",
+    "url": "https://github.com/fenok"
+  },
+  "homepage": "http://wtsplayer-fenok.rhcloud.com/",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:fenok/wtsplayer.git"
+  },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "dependencies": {
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
+    "node-uuid": "^1.4.8",
+    "peer": "^0.2.10",
+    "peerjs": "^1.2.0",
+    "peerjs_fork_firefox40": "^0.3.15",
+    "timesync": "^0.2.3",
+    "uuid": "^7.0.2"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "main": "index.js"
+}

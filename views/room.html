@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!--
+     The MIT License
+
+     Copyright (c) 2016 Leonid Fenko aka Fen-ok <fenok2112@gmail.com>, Georgy Kosturov aka Geosins <geosins@yandex.ru>
+    -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
+    <title>WTSPlayer</title>
+    <link rel="shortcut icon" href="/wtsplayerlogo.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/player.css">
+    <link rel="stylesheet" type="text/css" href="/overlay.css">
+    <link id="darkCSS" rel="stylesheet" type="text/css" disabled href="/overlay-dark.css">
+</head>
+<body bgcolor="black">
+<div id="overlay" class="closeContent">
+    <div id="float">
+        <div id="overlayContent">
+
+            <h1 id="logo">
+                <a href="#">
+                    <img src="wtsplayerlogo.svg">
+                    <span>W</span>
+                    <span>T</span>
+                    <span>S</span>
+                    <span>P</span>
+                    <span>l</span>
+                    <span>a</span>
+                    <span>y</span>
+                    <span>e</span>
+                    <span>r</span>
+                </a>
+            </h1>
+            <h1 id="title">Подключение к серверу</h1>
+            <div id="roomURL"> <!--class="widthCopy"-->
+                <h3>Данные для подключения к комнате:</h3>
+                <p>Для того, чтобы ваши друзья смогли к ней подключиться и посмотреть это видео вместе с вами, отправьте им ссылку с адресом этой комнаты.</p>
+                URL: <div class="shell"><input type="text" id="roomURLtext" readonly><input type="image" id="copyURL" src="/copy.svg"></div>
+                <div id="roomURLpassArea"> Пароль: <div class="shell">
+                    <input id="roomURLpass" type="text" readonly><div id="showPass">Показать</div><input type="image" id="copyPass" src="/copy.svg"></div>
+                </div>
+            </div>
+            <div>
+                <h3>Источник видео:</h3>
+                <div class="korpus1">
+                    <span data-type="inputLink" data-num="1">Ссылка</span><span data-type="localURL" data-num="2">Локальный файл</span><span
+                        data-type="peers" data-num="3">Источники пиров</span>
+                    <div>
+                        <input type="text" id="inputLink" style="width:95%" placeholder="Вставьте ссылку на видео">
+                        Cсылка на видео для совместного просмотра.<br> Поддерживаются: WebTorrent (magnet), YouTube, прямая&nbsp;ссылка.
+                    </div>
+                    <div>
+                        <label id="localURLWrapper"><input type="file" id="localURL"></label><br>
+                        <label style="display: none" for="seedLocal"><input type="checkbox" id="seedLocal">Раздавать файл другим пирам</label>
+                        Поддержка ограничена возможностями браузера.
+                    </div>
+                    <div>
+                        <select id="peersSrc" size="4" style="width:95%"></select>
+                        <input type="checkbox" id="follow" checked="checked"><label for="follow">Динамическое изменение видео вслед за пиром</label>
+                    </div>
+                </div>
+            </div>
+            <div id="typeRoom">
+                <h3>Идентификатор комнаты:</h3>
+                <div class="shell">
+                    <!--<span>Название:</span>-->
+                    <input id="passwordCheck" type="checkbox"><label for="passwordCheck"></label>
+                    <div class="shell">
+                        <input type="text" id="roomId" placeholder="Введите название">
+                        <input id="generateId" type="image" src="/refresh.svg">
+                        <span id="wrongId" class="fakeClose">Название уже зянято!</span>
+                    </div>
+                    <div class="shell">
+                        <input id="passwordInput" type="password" placeholder="Введите пароль">
+                        <input id="generatePass" type="image" src="/refresh.svg">
+                        <span id="wrongPassword" class="fakeClose">Пароль неверен!</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="checkbox" id="audioChatStatus">
+                <label for="audioChatStatus">Использование аудио-чата</label>
+                <br><br>
+                <label for="nick">Ник: </label>
+                <input type="text" id="nick" maxlength="20" placeholder="Введите ник для чата">
+                <br>
+            </div>
+            <input id="joinButton" type="button" value="Join room">
+        </div>
+        <div style="height:50px; width:100%;"></div>
+    </div>
+	<div id="footer">
+        <a target="_blank" href="https://www.mozilla.org/ru/firefox" title="Mozilla Firefox"><img src="/firefox.svg"></a>
+        <a target="_blank" href="https://www.google.com/chrome" title="Google Chrome"><img src="/chrome.svg"></a>
+        <a target="_blank" href="http://www.opera.com/" title="Opera"><img src="/opera.svg"></a>
+        <span>© Fen-ok, Geosins, 2016</span>
+        <a target="_blank" href="https://github.com/fenok" title="GitHub page (root)"><img src="/github-logo.svg"><img src="/github-mark.svg"></a>
+        <label style="display: none;" ><input id="darkThemeCheckbox" type="checkbox" />Dark</label>
+    </div>
+</div>
+<div id="player">
+    <div id="video"></div>
+    <br>
+    <div id="peerListParent">
+        <div id="peerList">
+            <span id="noteEmptyRoom">&#160;Кроме вас в комнате никого нет&#160;</span>
+            <table id="peerTable">
+            </table>
+        </div>
+    </div>
+    <div id="videoControls">
+        <table>
+            <td><input id="playerPlayPauseButton" type="image" src="wait.svg" disabled="disabled"></td>
+            <td width="100%"><input id="playerSeekRange" class="playerSliders video-sensitive" type="range" value="0" step="0.01"></td>
+            <td><span id="playerCurrentTimeOutput">00:00</span></td>
+            <td><input id="addOffsetButton" class="video-sensitive" type="image" src="prev.svg"><span class="under">-0.1c</span></td>
+            <td><span id="delOffsetButtonParent"><span id="delOffsetButton" class="video-sensitive">0</span></span></td>
+            <td><input id="subOffsetButton" class="video-sensitive" type="image" src="next.svg"><span class="under">+0.1с</span></td>
+            <td>
+                <div id="vol">
+                    <div id="volume_area">
+                        <input id="volume" class="vrange volume" type="range" value="1" min="0" max="1" step="0.01">
+                    </div>
+                    <input type="image" id="volume_button" src="/volume.svg" height="25px">
+                </div>
+            </td>
+            <td>
+                <select id="quality">
+                    <option>Качество</option>
+                </select>
+            </td>
+            <td><input id="peerListButton" type="image" src="people.svg"></td>
+            <td><input id="fullscreen" type="image" src="full.svg"></td>
+            <td><input id="backOverlayBut" type="image" src="back.svg"></td>
+        </table>
+    </div>
+    <div id="chatParent">
+        <div id="scrollbar">
+            <div id="thumb"></div>
+        </div>
+        <div id="chat"></div>
+    </div>
+    <div id="send">
+        <input id="messageInput" type="text"/>
+        <div id="leftBorder"></div>
+        <input id="sendMessageButton" type="image" src="send.svg">
+    </div>
+</div>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://cdn.jsdelivr.net/webtorrent/latest/webtorrent.min.js"></script>
+<script src="/peer.min.js"></script>
+<script src="/timesync/timesync.min.js"></script>
+<script src="/elementsController.js"></script>
+<script src="/peerController.js"></script>
+<script src="/stateController.js"></script>
+<script src="/roomScripts.js"></script>
+</body>
+</html>

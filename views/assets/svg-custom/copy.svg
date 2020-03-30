@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!--
+ DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+
+ Copyright (C) 2016 Georgy Kosturov aka Geosins <geosins@yandex.ru>
+-->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16.9332mm" height="16.9332mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 1693 1693"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:black}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M319 1307l421 0 0 106 -421 0 0 -106 0 0zm527 -632l-527 0 0 105 527 0 0 -105 0 0zm210 316l0 -211 -316 317 316 316 0 -211 527 0 0 -211 -527 0zm-474 -105l-263 0 0 105 263 0 0 -105zm-263 316l263 0 0 -105 -263 0 0 105zm948 105l105 0 0 211c-1,30 -11,55 -31,74 -20,20 -44,30 -74,32l-1054 0c-57,0 -105,-48 -105,-106l0 -1159c0,-58 48,-105 105,-105l316 0c0,-117 94,-211 211,-211 117,0 211,94 211,211l316 0c58,0 105,47 105,105l0 527 -105 0 0 -316 -1054 0 0 948 1054 0 0 -211zm-948 -843l843 0c0,-57 -48,-105 -106,-105l-105 0c-58,0 -105,-48 -105,-105 0,-58 -48,-106 -106,-106 -58,0 -105,48 -105,106 0,57 -48,105 -106,105l-105 0c-58,0 -105,48 -105,105l0 0z"/>
+ </g>
+</svg>
